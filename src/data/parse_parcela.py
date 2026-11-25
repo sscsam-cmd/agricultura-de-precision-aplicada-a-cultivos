@@ -4,7 +4,7 @@ Parse Parcela.xlsx into a clean CSV with DMS -> decimal -> UTM coordinates.
 Input:
     data/raw/Parcela.xlsx (sheet "Hoja1")
 Output:
-    data/processed/parcela_113041_vertices.csv
+    data/processed/parcela_vertices.csv
 
 Columns produced:
     vertex_id, vertex_num,
@@ -25,7 +25,7 @@ from pyproj import Transformer
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 SRC_XLSX = PROJECT_ROOT / "data" / "raw" / "Parcela.xlsx"
 OUT_DIR = PROJECT_ROOT / "data" / "processed"
-OUT_CSV = OUT_DIR / "parcela_113041_vertices.csv"
+OUT_CSV = OUT_DIR / "parcela_vertices.csv"
 
 UTM_EPSG = 32719  # WGS84 / UTM zone 19S
 UTM_ZONE = 19
